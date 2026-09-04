@@ -1,0 +1,26 @@
+{
+  "name": "任务闯关 · Task Quest",
+  "short_name": "任务闯关",
+  "description": "游戏化任务打卡小程序，把长期目标分解成关卡，闯关升级拿奖励",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#007AFF",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "games", "education"]
+}
