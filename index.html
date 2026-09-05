@@ -102,6 +102,17 @@
   }
   /* ===== 甜心软萌 可爱风格 ===== */
   /* ===== 苹果浅色模式专属样式 ===== */
+  body[data-theme="apple"] .level-dot.completed {
+    background: linear-gradient(135deg, #8EC5FC, #C2E0FF);
+    box-shadow: 0 4px 15px rgba(142, 197, 252, 0.3);
+  }
+  body[data-theme="apple"] .level-dot.completed .level-num { border-color: #8EC5FC; color: #8EC5FC; }
+  body[data-theme="apple"] .level-info.completed { border-color: #8EC5FC; opacity: 0.7; }
+  body[data-theme="apple"] .level-path { background: #E5E5EA; }
+  body[data-theme="apple"] .level-path-fill {
+    background: linear-gradient(180deg, #5AC8FA, #007AFF);
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.2);
+  }
   body[data-theme="apple"] .reward-card {
     background: linear-gradient(135deg, #FFFFFF, #F8F8FA);
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
@@ -523,19 +534,14 @@
     border: 2px solid #FFE4F0;
     border-radius: 12px;
   }
-  body[data-theme="cute"] .reward-item.unlocked {
-    border-color: #A8E6CF;
-    background: linear-gradient(135deg, #F0FFF5, #E8FFF0);
-  }
+  body[data-theme="cute"] .reward-item.unlocked { border-color: var(--primary); background: rgba(0, 122, 255, 0.06); }
   body[data-theme="cute"] .shop-item {
     background: linear-gradient(135deg, #FFFFFF, #FFF9FC);
     border: 2px solid #FFE4F0;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(255,158,205,0.15);
   }
-  body[data-theme="cute"] .shop-item.owned {
-    border-color: #A8E6CF;
-  }
+  body[data-theme="cute"] .shop-item.owned { border-color: rgba(0, 122, 255, 0.4); }
   body[data-theme="cute"] .wheel-container {
     border: 6px solid #FFB6D9;
     box-shadow: 0 0 30px rgba(255,158,205,0.3);
@@ -915,19 +921,14 @@
     border: 2px solid #F5E6EB;
     border-radius: 12px;
   }
-  body[data-theme="ballet"] .reward-item.unlocked {
-    border-color: #A8E6CF;
-    background: linear-gradient(135deg, #F0FFF5, #E8FFF0);
-  }
+  body[data-theme="ballet"] .reward-item.unlocked { border-color: var(--primary); background: rgba(0, 122, 255, 0.06); }
   body[data-theme="ballet"] .shop-item {
     background: linear-gradient(135deg, #FFFFFF, #FFF8FA);
     border: 2px solid #F5E6EB;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(232,165,184,0.1);
   }
-  body[data-theme="ballet"] .shop-item.owned {
-    border-color: #A8E6CF;
-  }
+  body[data-theme="ballet"] .shop-item.owned { border-color: rgba(0, 122, 255, 0.4); }
   body[data-theme="ballet"] .wheel-container {
     border: 6px solid #F0D0DA;
     box-shadow: 0 0 30px rgba(232,165,184,0.2);
@@ -1311,19 +1312,14 @@
     border: 2px outset #C0C0C0;
     border-radius: 0;
   }
-  body[data-theme="retro"] .reward-item.unlocked {
-    border: 2px inset #808080;
-    background: #E0E0E0;
-  }
+  body[data-theme="retro"] .reward-item.unlocked { border-color: var(--primary); background: rgba(0, 122, 255, 0.06); }
   body[data-theme="retro"] .shop-item {
     background: #C0C0C0;
     border: 2px outset #C0C0C0;
     border-radius: 0;
     box-shadow: none;
   }
-  body[data-theme="retro"] .shop-item.owned {
-    border: 2px inset #008000;
-  }
+  body[data-theme="retro"] .shop-item.owned { border-color: rgba(0, 122, 255, 0.4); }
   body[data-theme="retro"] .wheel-container {
     border: 4px inset #808080;
     box-shadow: none;
@@ -1615,19 +1611,14 @@
     border: 1px solid #B8A080;
     border-radius: 4px;
   }
-  body[data-theme="vintage"] .reward-item.unlocked {
-    border-color: #A08050;
-    background: linear-gradient(135deg, #F0E6D2, #E8DCC8);
-  }
+  body[data-theme="vintage"] .reward-item.unlocked { border-color: var(--primary); background: rgba(0, 122, 255, 0.06); }
   body[data-theme="vintage"] .shop-item {
     background: linear-gradient(135deg, #E8DCC8, #DCC8A8);
     border: 1px solid #B8A080;
     border-radius: 4px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
   }
-  body[data-theme="vintage"] .shop-item.owned {
-    border-color: #7A9E7E;
-  }
+  body[data-theme="vintage"] .shop-item.owned { border-color: rgba(0, 122, 255, 0.4); }
   body[data-theme="vintage"] .wheel-container {
     border: 4px solid #8B7355;
     box-shadow: 0 0 20px rgba(139,115,85,0.3), inset 0 0 10px rgba(0,0,0,0.1);
@@ -2597,8 +2588,9 @@
     transition: all 0.3s;
   }
   .level-dot.completed {
-    background: linear-gradient(135deg, #8EC5FC, #C2E0FF);
-    box-shadow: 0 4px 15px rgba(142, 197, 252, 0.4);
+    background: linear-gradient(135deg, #4A4A6A, #3A3A5A);
+    box-shadow: none;
+    opacity: 0.7;
   }
   .level-dot.current {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -2626,7 +2618,7 @@
     justify-content: center;
     color: var(--primary);
   }
-  .level-dot.completed .level-num { border-color: #8EC5FC; color: #8EC5FC; }
+  .level-dot.completed .level-num { border-color: #6C6C8A; color: #8A8AAA; }
   .level-dot.locked .level-num { border-color: var(--border); color: var(--text-secondary); }
   @keyframes pulse {
     0%, 100% { transform: scale(1); }
@@ -2641,7 +2633,7 @@
     transition: all 0.3s;
     position: relative;
   }
-  .level-info.completed { border-color: #8EC5FC; opacity: 0.7; }
+  .level-info.completed { border-color: #4A4A6A; opacity: 0.6; }
   .level-info.current { border-color: var(--primary); box-shadow: 0 0 20px rgba(108, 92, 231, 0.2); }
   .level-info.locked { opacity: 0.4; }
   .level-name {
@@ -2882,16 +2874,26 @@
   .reward-desc { font-size: 13px; color: var(--text-secondary); position: relative; }
   .reward-count {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 2px;
     margin-top: 16px;
-    padding: 8px 20px;
-    background: rgba(255, 215, 0, 0.15);
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 10px 28px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 16px;
+    position: relative;
+  }
+  .reward-remaining {
+    font-size: 20px;
     font-weight: 700;
     color: var(--gold);
-    position: relative;
+    line-height: 1.2;
+  }
+  .reward-unlocked-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold);
+    opacity: 0.65;
   }
   .reward-list-title {
     font-size: 16px;
@@ -2912,7 +2914,22 @@
     margin-bottom: 16px;
     transition: all 0.3s;
   }
-  .reward-item.unlocked { border-color: var(--gold); background: rgba(255, 215, 0, 0.05); }
+  .reward-item.unlocked { border-color: var(--primary); background: rgba(0, 122, 255, 0.06); }
+  .reward-item-actions { display: flex; gap: 6px; align-items: center; }
+  .reward-unlock-btn {
+    padding: 5px 14px; border-radius: 8px; border: none; cursor: pointer;
+    background: var(--primary); color: #fff; font-size: 12px; font-weight: 500;
+    transition: all 0.2s; white-space: nowrap;
+  }
+  .reward-unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .reward-unlock-btn:disabled { background: var(--bg-card-hover); color: var(--text-secondary); cursor: not-allowed; transform: none; }
+  .reward-delete-btn {
+    padding: 2px 6px; border-radius: 6px; border: none; cursor: pointer;
+    background: transparent; color: var(--text-secondary); font-size: 11px;
+    opacity: 0.4; transition: all 0.2s; line-height: 1;
+  }
+  .reward-delete-btn:hover { opacity: 1; color: var(--danger); }
+
   .reward-item-icon { font-size: 28px; flex-shrink: 0; }
   .reward-item-info { flex: 1; }
   .reward-item-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
@@ -2973,7 +2990,7 @@
     transition: all 0.3s;
     position: relative;
   }
-  .skin-card.owned { border-color: var(--success); }
+  .skin-card.owned { border-color: rgba(0, 122, 255, 0.4); border-width: 1.5px; }
   .skin-card.active { border-color: var(--gold); box-shadow: 0 0 15px rgba(255,215,0,0.3); }
   .skin-card.limited { border-color: var(--danger); }
   .skin-preview {
@@ -2996,7 +3013,7 @@
     font-size: 11px;
     margin-top: 4px;
   }
-  .skin-status.owned { color: var(--success); }
+  .skin-status.owned { color: var(--primary); }
   .skin-status.active { color: var(--gold); }
   .limited-tag {
     position: absolute;
@@ -3912,8 +3929,8 @@
     <div class="nav-tab" data-page="shop">🛒 商店</div>
     <div class="nav-tab" data-page="wheel">🎰 转盘</div>
     <div class="nav-tab" data-page="achievements">🏆 成就</div>
-    <div class="nav-tab" data-page="highlights">✨ 高光</div>
     <div class="nav-tab" data-page="rewards">🎁 奖励</div>
+    <div class="nav-tab" data-page="highlights">✨ 高光</div>
     <div class="nav-tab" data-page="settings">⚙️ 设置</div>
   </div>
   <!-- 关卡页面 -->
@@ -4072,10 +4089,14 @@
     <div class="reward-card">
       <div class="reward-trophy">🏆</div>
       <div class="reward-title">奖励收集</div>
-      <div class="reward-desc">每 60 积分解锁一个奖励</div>
+      <div class="reward-desc">每 60 积分获得一次解锁机会</div>
       <div class="reward-count">
-        <span>🎁</span>
-        <span>已解锁 <span id="rewardUnlocked">0</span> 个</span>
+        <span class="reward-remaining">
+          剩余 <span id="rewardAvailableCount">0</span> 次
+        </span>
+        <span class="reward-unlocked-text">
+          已解锁 <span id="rewardUnlocked">0</span> 个
+        </span>
       </div>
     </div>
     <div class="reward-list-title">🎁 我的奖励</div>
@@ -4177,6 +4198,7 @@
           <li>请勿清除浏览器<b>缓存/数据</b>，会导致所有记录被清空</li>
           <li>更换浏览器或设备前，记得去设置页<b>导出备份</b>，新设备导入恢复</li>
           <li>数据保存在<b>本地浏览器</b>，不会自动云同步</li>
+          <li>如使用道具、金币、积分没有反应，可以<b>刷新一下页面</b></li>
         </ul>
       </div>
       <h4 style="margin:16px 0 8px;color:var(--primary);">💰 金币系统</h4>
@@ -4531,7 +4553,7 @@ const SKINS = [
   { id: 'warmgold', name: '暖金夜灯', price: 10, color: '#F0DA5A', limited: false },
   { id: 'skyblue', name: '晴空蓝', price: 10, color: '#316AFD', limited: false },
   { id: 'ballet', name: '芭蕾梦境', price: 15, color: '#E8A5B8', limited: false },
-  { id: 'retro', name: '复古游戏', price: 15, color: '#00FF41', limited: false },
+  { id: 'retro', name: '复古游戏', price: 15, color: '#34C759', limited: false },
   { id: 'vintage', name: '古早怀旧', price: 15, color: '#C4A06A', limited: false },
   { id: 'cyber', name: '赛博朋克', price: 0, color: '#FF2D7B', limited: true },
 ];
@@ -4687,6 +4709,7 @@ let state = {
   customRewards: [],
   rewardMilestone: 0,
   rewardBonus: 0,
+  availableRewardUnlocks: 0,
   totalFocusMinutes: 0,
   totalTasksDone: 0,
   achievements: [],
@@ -5455,13 +5478,16 @@ function showLevelUp(level, coins = 0) {
 }
 function checkRewardUnlock() {
   const REWARD_INTERVAL = 60;
-  let unlocked = 0;
+  let newUnlocks = 0;
   while (state.totalPoints + state.rewardBonus >= (state.rewardMilestone + 1) * REWARD_INTERVAL) {
     state.rewardMilestone++;
-    unlocked++;
+    newUnlocks++;
     state.rewardBonus = 0;
   }
-  if (unlocked > 0) unlockRewards(unlocked);
+  if (newUnlocks > 0) {
+    state.availableRewardUnlocks += newUnlocks;
+    setTimeout(() => { showPointsPopup('🎁 获得 ' + newUnlocks + ' 次奖励解锁机会！'); }, 500);
+  }
 }
 function openBoostModal() {
   document.getElementById('boostCurrent').textContent = state.rewardBonus + ' 分';
@@ -5497,13 +5523,47 @@ function boostReward(points, coins) {
   closeModal('boostModal');
   showPointsPopup(`⚡ 加速 +${actualPoints}分！`);
 }
-function unlockRewards(count) {
-  let unlocked = 0;
+function unlockRewardById(id) {
+  // 检查是否有可用解锁次数
+  if (state.availableRewardUnlocks <= 0) {
+    showPointsPopup('没有可用的解锁次数，继续积累积分吧！');
+    return;
+  }
+  // 查找奖励
   const all = [...state.rewards, ...state.customRewards];
-  all.forEach(r => { if (!r.unlocked && unlocked < count) { r.unlocked = true; unlocked++; } });
+  const reward = all.find(r => r.id == id);
+  if (!reward) return;
+  if (reward.unlocked) {
+    showPointsPopup('该奖励已解锁');
+    return;
+  }
+  // 消耗一次解锁次数，解锁该奖励
+  state.availableRewardUnlocks--;
+  reward.unlocked = true;
+  // 分离默认奖励和自定义奖励
   state.rewards = all.filter(r => r.id <= 8);
   state.customRewards = all.filter(r => r.id > 8);
-  if (unlocked > 0) setTimeout(() => { celebrate(); showPointsPopup('🎁 解锁奖励!'); }, 800);
+  // 检查成就
+  checkAchievements();
+  saveState();
+  renderRewards();
+  renderAchievements();
+  renderRewardProgress();
+  celebrate();
+  showPointsPopup('🎁 解锁奖励：' + reward.name + '！');
+}
+function deleteReward(id) {
+  const all = [...state.rewards, ...state.customRewards];
+  const reward = all.find(r => r.id == id);
+  if (!reward) return;
+  // 确认删除
+  if (!confirm('确定要删除奖励「' + reward.name + '」吗？')) return;
+  // 从列表中移除
+  state.rewards = state.rewards.filter(r => r.id != id);
+  state.customRewards = state.customRewards.filter(r => r.id != id);
+  saveState();
+  renderRewards();
+  showPointsPopup('🗑️ 已删除奖励');
 }
 // ===== 成就 =====
 function checkAchievements(silent = false) {
@@ -6056,16 +6116,31 @@ function renderHighlights() {
 function renderRewards() {
   const all = [...state.rewards, ...state.customRewards];
   document.getElementById('rewardUnlocked').textContent = all.filter(r=>r.unlocked).length;
-  document.getElementById('rewardList').innerHTML = all.map(r => `
+  // 显示可用解锁次数
+  const availableCountEl = document.getElementById('rewardAvailableCount');
+  if (availableCountEl) {
+    availableCountEl.textContent = state.availableRewardUnlocks;
+  }
+  document.getElementById('rewardList').innerHTML = all.map(r => {
+    const canUnlock = !r.unlocked && state.availableRewardUnlocks > 0;
+    return `
     <div class="reward-item ${r.unlocked?'unlocked':''}">
       <div class="reward-item-icon">${r.icon}</div>
       <div class="reward-item-info">
         <div class="reward-item-name">${escapeHtml(r.name)}</div>
         <div class="reward-item-desc">${escapeHtml(r.desc||'')}</div>
       </div>
-      <div class="reward-item-status ${r.unlocked?'unlocked':'locked'}">${r.unlocked?'已解锁':'未解锁'}</div>
+      <div class="reward-item-actions">
+        ${r.unlocked 
+          ? '<span style="font-size:12px;color:var(--primary);font-weight:600;white-space:nowrap;">✓ 已解锁</span>'
+          : canUnlock 
+            ? '<button class="reward-unlock-btn" onclick="unlockRewardById(' + r.id + ')">解锁</button>'
+            : '<span style="font-size:12px;color:var(--text-secondary);white-space:nowrap;">未解锁</span>'
+        }
+        <button class="reward-delete-btn" onclick="deleteReward(${r.id})" title="删除">✕</button>
+      </div>
     </div>
-  `).join('');
+  `}).join('');
 }
 function addReward() {
   document.getElementById('rewardNameInput').value = '';
@@ -6158,6 +6233,11 @@ function useRecPoints(type) {
   let points = 0;
   if (type === "conservative") points = document.getElementById("recConservative").textContent;
   else if (type === "recommended") points = document.getElementById("recRecommended").textContent;
+  else if (type === "challenge") points = document.getElementById("recChallenge").textContent;
+  // 直接填入目标积分输入框
+  document.getElementById("questTargetInput").value = points;
+  showPointsPopup("✨ 已填入 " + points + " 积分");
+}
 function copyBackup() {
   const code = document.getElementById("backupCode").value;
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -6171,8 +6251,6 @@ function copyBackup() {
     document.getElementById("backupCode").select();
     try { document.execCommand("copy"); showPointsPopup("📋 已复制!"); } catch(e){ alert("复制失败，请手动复制"); }
   }
-}
-  try { document.execCommand('copy'); showPointsPopup('📋 已复制!'); } catch(e){}
 }
 function showImportModal() {
   document.getElementById('importCode').value = '';
