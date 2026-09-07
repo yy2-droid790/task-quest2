@@ -4214,11 +4214,10 @@
 <div class="modal-overlay" id="rulesModal">
   <div class="modal" style="max-height:80vh;overflow-y:auto;">
     <div class="modal-title">📖 游戏规则</div>
-    <div class="modal-subtitle">v27版本完整规则说明</div>
     <div style="text-align:left;font-size:13px;line-height:1.7;">
       
       <div style="background:rgba(255,193,7,0.15);border:1px solid var(--gold);border-radius:10px;padding:12px;margin-bottom:16px;">
-        <div style="font-weight:700;margin-bottom:6px;color:var(--gold);">⚠️ 重要注意事项</div>
+        <div style="font-weight:700;margin-bottom:6px;color:var(--gold);">⚠️ 注意事项</div>
         <ul style="margin:0;padding-left:18px;font-size:12px;line-height:1.8;">
           <li>请勿使用浏览器<b>隐身/无痕模式</b>，关闭窗口后数据会丢失</li>
           <li>请勿清除浏览器<b>缓存/数据</b>，会导致所有记录被清空</li>
@@ -4227,24 +4226,34 @@
           <li>如使用道具、金币、积分没有反应，可以<b>刷新一下页面</b></li>
         </ul>
       </div>
+
+      <h4 style="margin:16px 0 8px;color:var(--primary);">⭐ 积分规则</h4>
+      <p style="margin:4px 0;"><b>关卡积分：</b></p>
+      <ul style="margin:4px 0;padding-left:20px;">
+        <li>必选关（1-11关）全清：+6积分</li>
+        <li>加练关（12-13关）全清：+5积分</li>
+        <li>单关完成：按关卡难度给对应积分</li>
+      </ul>
+
       <h4 style="margin:16px 0 8px;color:var(--primary);">💰 金币系统</h4>
       <p style="margin:4px 0;"><b>获取方式：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
         <li>必选关全清：+5金币（一次性）</li>
         <li>完美全清13关：额外+2金币</li>
         <li>周全勤奖：连续7天全清 +10金币</li>
-        <li>升级奖励：每5级固定+10金币（100级+50）</li>
+        <li>升级奖励：每5级固定+10金币</li>
         <li>赛季段位奖励：每月新赛季根据上赛季段位发放</li>
-        <li>里程碑：+2/+5/+8金币</li>
-        <li>成就：每个+1金币</li>
-        <li>转盘：随机获得</li>
+        <li>里程碑奖励：终极目标进度达到1/3 +2金币、达到1/2 +5金币、达到2/3 +8金币（每个节点只能领一次）</li>
+        <li>成就解锁：每个+1金币</li>
+        <li>幸运转盘：随机获得</li>
       </ul>
-      <h4 style="margin:16px 0 8px;color:var(--primary);">⭐ 等级与段位</h4>
+
+      <h4 style="margin:16px 0 8px;color:var(--primary);">🏆 等级与段位</h4>
       <p style="margin:4px 0;"><b>等级系统（最高100级）：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
-        <li>基于终极目标积分动态计算</li>
-        <li>目标越高，升级需要积分越多</li>
-        <li>每5级给一次金币奖励</li>
+        <li>等级升级根据目标所需积分计算，积攒够积分等级为100</li>
+        <li>升级每一级的积分动态计算，等级越高升级所需积分越多</li>
+        <li>每升5级奖励一次金币</li>
       </ul>
       <p style="margin:4px 0;"><b>赛季段位（每月1号重置）：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
@@ -4261,34 +4270,30 @@
         <li>钻石：+100金币</li>
         <li>传奇：+200金币</li>
       </ul>
-      
-      <h4 style="margin:16px 0 8px;color:var(--primary);">⚡ 金币加速奖励</h4>
-      <p style="margin:4px 0;"><b>位置：</b>奖励进度条右侧的 ⚡ 按钮</p>
-      <p style="margin:4px 0;"><b>功能：</b>用金币减少当前奖励所需积分，加速解锁</p>
+
+      <h4 style="margin:16px 0 8px;color:var(--primary);">🎁 奖励系统</h4>
       <ul style="margin:4px 0;padding-left:20px;">
-        <li>轻加速：20金币，减少10积分需求</li>
-        <li>中加速：35金币，减少20积分需求</li>
-        <li>拉满加速：50金币，减少30积分需求（上限）</li>
-        <li>每个奖励最多加速30分（50%）</li>
+        <li>每7天可修改一次所需积分（默认60积分）</li>
+        <li>⚡ 金币加速：奖励进度条右侧的⚡按钮，用金币减少所需积分（最多加速30分）</li>
       </ul>
-      
+
       <h4 style="margin:16px 0 8px;color:var(--primary);">🔥 连胜机制</h4>
       <p style="margin:4px 0;"><b>连胜规则：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
         <li>必选关全清算连胜1天</li>
         <li>中断1天（没全清）→ 连胜清零</li>
-        <li>连胜只加积分加成，不加金币</li>
       </ul>
       <p style="margin:4px 0;"><b>积分加成：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
-        <li>1-2天：+0%</li>
-        <li>3-6天：+5%</li>
-        <li>7-13天：+10%</li>
-        <li>14-20天：+15%</li>
-        <li>21天以上：+20%</li>
+        <li>连胜0天：+0%</li>
+        <li>连胜≥2天：+5%</li>
+        <li>连胜≥4天：+10%</li>
+        <li>连胜≥6天：+15%</li>
+        <li>连胜≥10天：+25%</li>
+        <li>连胜≥20天：+30%</li>
       </ul>
-      <p style="margin:6px 0;font-size:12px;color:var(--text-secondary);">💡 加成是在当天获得的基础积分上乘以对应比例。</p>
-      
+      <p style="margin:6px 0;font-size:12px;color:var(--text-secondary);">💡 加成直接加在今天完成关卡获得的积分上。</p>
+
       <h4 style="margin:16px 0 8px;color:var(--primary);">🎒 道具系统</h4>
       <ul style="margin:4px 0;padding-left:20px;">
         <li><b>双倍积分卡⚡</b>：下一关积分翻倍</li>
@@ -4297,6 +4302,14 @@
         <li><b>跳过关卡⏭️</b>：使用后去关卡页面点"跳过"按钮</li>
         <li><b>半价券🎫</b>：下次转盘半价（3金币）</li>
       </ul>
+
+      <h4 style="margin:16px 0 8px;color:var(--primary);">💾 数据与备份</h4>
+      <ul style="margin:4px 0;padding-left:20px;">
+        <li>所有数据保存在本地浏览器</li>
+        <li>设置页可导出备份（复制文本保存）</li>
+        <li>换设备/换浏览器时，导入备份即可恢复</li>
+      </ul>
+
       <button class="btn btn-primary" onclick="closeModal('rulesModal')">知道了</button>
     </div>
   </div>
@@ -4333,7 +4346,8 @@
     <div class="modal-title">📊 设置奖励所需积分</div>
     <div class="modal-subtitle">设置解锁一个奖励需要多少积分</div>
     <input type="number" class="modal-input" id="rewardPointsInput" placeholder="例如：60">
-    <div style="font-size:12px;color:var(--text-secondary);margin:-10px 0 16px;text-align:left;">当前：<span id="currentRewardPoints">60</span> 积分解锁一个奖励</div>
+    <div style="font-size:12px;color:var(--text-secondary);margin:-10px 0 8px;text-align:left;">当前：<span id="currentRewardPoints">60</span> 积分解锁一个奖励</div>
+    <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;text-align:center;">⏰ 每7天可修改一次</div>
     <div class="modal-actions">
       <button class="btn btn-ghost" onclick="closeModal('rewardPointsModal')">取消</button>
       <button class="btn btn-primary" onclick="saveRewardPoints()">保存</button>
