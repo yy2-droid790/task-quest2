@@ -4257,18 +4257,18 @@
       </ul>
       <p style="margin:4px 0;"><b>赛季段位（每月1号重置）：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
-        <li>青铜 0分 → 白银 11分 → 黄金 31分</li>
-        <li>铂金 61分 → 钻石 101分 → 传奇 151分</li>
+        <li>青铜 0分 → 白银 21分 → 黄金 51分</li>
+        <li>铂金 101分 → 钻石 161分 → 传奇 241分</li>
         <li>获得积分就加赛季分，不受全清影响</li>
       </ul>
       <p style="margin:4px 0;"><b>赛季段位奖励（每月新赛季发放）：</b></p>
       <ul style="margin:4px 0;padding-left:20px;">
-        <li>青铜：+5金币</li>
-        <li>白银：+15金币</li>
-        <li>黄金：+30金币</li>
-        <li>铂金：+60金币</li>
-        <li>钻石：+100金币</li>
-        <li>传奇：+200金币</li>
+        <li>青铜：+0金币</li>
+        <li>白银：+10金币</li>
+        <li>黄金：+20金币</li>
+        <li>铂金：+35金币</li>
+        <li>钻石：+50金币</li>
+        <li>传奇：+70金币</li>
       </ul>
 
       <h4 style="margin:16px 0 8px;color:var(--primary);">🎁 奖励系统</h4>
@@ -4612,14 +4612,14 @@ const SKINS = [
 ];
 // ===== 转盘奖品 =====
 const WHEEL_PRIZES = [
-  { id: 'cyber', name: '赛博皮肤', icon: '💜', type: 'skin', weight: 8 },
-  { id: 'half', name: '半价券', icon: '🎫', type: 'item', weight: 12 },
-  { id: 'double', name: '双倍卡', icon: '⚡', type: 'item', weight: 12 },
-  { id: 'crit', name: '暴击符', icon: '💥', type: 'item', weight: 12 },
-  { id: 'scroll', name: '任务卷轴', icon: '📜', type: 'item', weight: 12 },
-  { id: 'skip', name: '跳过关卡', icon: '⏭️', type: 'item', weight: 12 },
-  { id: 'coin', name: '金币奖励', icon: '💰', type: 'coin', weight: 32 },
-  { id: "none", name: "谢谢惠顾", icon: "🍀", type: "none", weight: 10 },
+  { id: 'cyber', name: '赛博皮肤', icon: '💜', type: 'skin', weight: 6 },
+  { id: 'half', name: '半价券', icon: '🎫', type: 'item', weight: 9 },
+  { id: 'double', name: '双倍卡', icon: '⚡', type: 'item', weight: 9 },
+  { id: 'crit', name: '暴击符', icon: '💥', type: 'item', weight: 9 },
+  { id: 'scroll', name: '任务卷轴', icon: '📜', type: 'item', weight: 9 },
+  { id: 'skip', name: '跳过关卡', icon: '⏭️', type: 'item', weight: 9 },
+  { id: 'coin', name: '金币奖励', icon: '💰', type: 'coin', weight: 18 },
+  { id: "none", name: "谢谢惠顾", icon: "🍀", type: "none", weight: 41 },
 ];
 // ===== 道具定义 =====
 const ITEMS = {
@@ -5451,11 +5451,11 @@ function getStreakBonus() {
 }
 // ===== 赛季段位 =====
 function getSeasonRank(points) {
-  if (points >= 151) return { name: '传奇', icon: '🌟', level: 6 };
-  if (points >= 101) return { name: '钻石', icon: '👑', level: 5 };
-  if (points >= 61) return { name: '铂金', icon: '💎', level: 4 };
-  if (points >= 31) return { name: '黄金', icon: '🥇', level: 3 };
-  if (points >= 11) return { name: '白银', icon: '🥈', level: 2 };
+  if (points >= 241) return { name: '传奇', icon: '🌟', level: 6 };
+  if (points >= 161) return { name: '钻石', icon: '👑', level: 5 };
+  if (points >= 101) return { name: '铂金', icon: '💎', level: 4 };
+  if (points >= 51) return { name: '黄金', icon: '🥇', level: 3 };
+  if (points >= 21) return { name: '白银', icon: '🥈', level: 2 };
   return { name: '青铜', icon: '🥉', level: 1 };
 }
 function checkSeasonReset() {
@@ -5465,7 +5465,7 @@ function checkSeasonReset() {
     // 新赛季，发上赛季奖励
     if (state.seasonMonth && state.seasonPoints > 0) {
       const lastRank = getSeasonRank(state.seasonPoints);
-      const rewards = [0, 5, 15, 30, 60, 100, 200];
+      const rewards = [0, 0, 10, 20, 35, 50, 70];
       const reward = rewards[lastRank.level] || 0;
       if (reward > 0) {
         state.coins += reward;
